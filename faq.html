@@ -7,21 +7,12 @@ the designer of Modern Day mathematics">
 content="Math,Aitzaz Imtiaz,Book,homepage,books,
 papers,biography">
 <title>site by Aitzaz Imtiaz</title>
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      jax: ["input/TeX", "output/HTML-CSS"],
-      extensions: ["tex2jax.js"],
-      "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] },
-      tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
-      TeX: { noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } } },
-      messageStyle: "none"
-      loader: {load: ['[tex]/ams']},
-      tex: {packages: {'[+]': ['ams']}}
-    });
-    </script>    
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
-
-
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://example.com/mathjax/MathJax.js?config=TeX-AMS_CHTML">
+</script>
 <style>
 .aligncenter {
     text-align: center;
