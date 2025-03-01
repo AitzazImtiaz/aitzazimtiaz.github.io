@@ -33,11 +33,11 @@
     position: relative;
   }
   .scroller {
-    display: flex;
+    display: inline-block;
     white-space: nowrap;
     position: absolute;
     will-change: transform;
-    animation: scrollLeft 10s linear infinite;
+    animation: scrollRight 10s linear infinite;
   }
   .scroller span {
     font-size: 14px;
@@ -45,12 +45,12 @@
     color: black;
     padding-right: 50px;
   }
-  @keyframes scrollLeft {
+  @keyframes scrollRight {
     from {
-      transform: translateX(100%);
+      transform: translateX(-100%);
     }
     to {
-      transform: translateX(-100%);
+      transform: translateX(100%);
     }
   }
 </style>
@@ -61,14 +61,5 @@
     <span>The World Moves Around, It is Round and of Tragedy</span>
   </div>
 </div>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const scroller = document.getElementById("scroller");
-    const text = scroller.innerHTML;
-    for (let i = 0; i < 3; i++) { // Duplicate to ensure smooth looping
-      scroller.innerHTML += text;
-    }
-  });
-</script>
 </body>
 </html>
