@@ -37,7 +37,7 @@
     white-space: nowrap;
     position: absolute;
     will-change: transform;
-    animation: scrollRight 10s linear infinite;
+    animation: scrollLeft 10s linear infinite;
   }
   .scroller span {
     font-size: 14px;
@@ -45,12 +45,12 @@
     color: black;
     padding-right: 50px;
   }
-  @keyframes scrollRight {
+  @keyframes scrollLeft {
     from {
-      transform: translateX(-100%);
+      transform: translateX(100%);
     }
     to {
-      transform: translateX(100%);
+      transform: translateX(-100%);
     }
   }
 </style>
