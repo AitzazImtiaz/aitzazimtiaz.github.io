@@ -42,10 +42,54 @@
     max-width: 800px;
     padding: 20px;
   }
+  .scroller-container {
+    width: 100%;
+    height: 25px; /* Small area */
+    background: #222;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+  }
+
+  .scroller {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scrollRight 10s linear infinite;
+  }
+
+  .scroller span {
+    font-size: 14px;
+    font-weight: bold;
+    color: yellow;
+    padding: 0 30px;
+  }
+
+  @keyframes scrollRight {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
 </style>
 </head>
 <body>
-  
+
+<script>
+  const scroller = document.getElementById("scroller");
+  const text = " The World Moves Around, It is Round and of Tragedy";
+
+  function createScrollingText() {
+    for (let i = 0; i < 10; i++) {
+      let span = document.createElement("span");
+      span.textContent = text;
+      scroller.appendChild(span);
+    }
+  }
+
+  createScrollingText();
+</script>
   <div class="image-container">
     <img src="Snapchat-407002231.jpg" alt="Aitzaz2024 Image">
   </div>
