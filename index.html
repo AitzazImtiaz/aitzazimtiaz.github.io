@@ -36,6 +36,7 @@
     display: flex;
     white-space: nowrap;
     position: absolute;
+    will-change: transform;
     animation: scrollLeft 10s linear infinite;
   }
   .scroller span {
@@ -58,8 +59,16 @@
 <div class="scroller-container">
   <div class="scroller" id="scroller">
     <span>The World Moves Around, It is Round and of Tragedy</span>
-    <span>The World Moves Around, It is Round and of Tragedy</span>
   </div>
 </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const scroller = document.getElementById("scroller");
+    const text = scroller.innerHTML;
+    for (let i = 0; i < 3; i++) { // Duplicate to ensure smooth looping
+      scroller.innerHTML += text;
+    }
+  });
+</script>
 </body>
 </html>
