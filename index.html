@@ -2,66 +2,120 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   :root {
     --pop-art-pink: #ff69f7;
     --pop-art-blue: #00f7ff;
     --pop-art-yellow: #fff349;
     --body-blue: #e6f9ff;
-    --base-font-size: clamp(16px, 2vw, 20px);
-  }
-
-  * {
-    box-sizing: border-box;
   }
 
   body {
     margin: 0;
     padding: 0;
     background: var(--body-blue);
-    font-family: 'Impact', sans-serif;
+    font-family: 'Impact', Arial, sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-size: var(--base-font-size);
   }
 
-  /* Header Styles */
   .pop-art-header {
     background: var(--pop-art-pink);
-    padding: 1rem clamp(1rem, 3vw, 2rem);
-    border-bottom: 4px solid black;
+    padding: 1rem;
+    border-bottom: 4px solid #000;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
     box-shadow: 8px 8px 0 var(--pop-art-blue);
-    position: relative;
   }
 
   .header-name {
-    font-size: clamp(1.5rem, 6vw, 2.5rem);
-    letter-spacing: clamp(1px, 0.5vw, 3px);
+    font-size: 2rem;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    color: black;
+    color: #000;
     text-shadow: 3px 3px var(--pop-art-yellow);
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: 1px #fff;
+    margin: 0.5rem;
     transform: rotate(-2deg);
-    margin: 0.5rem 0;
   }
 
   .nav-links {
     display: flex;
-    gap: clamp(0.5rem, 2vw, 2rem);
+    gap: 1rem;
+    padding: 0.5rem;
     flex-wrap: wrap;
-    justify-content: flex-end;
   }
 
   .nav-item {
-    color: black;
+    color: #000;
     text-decoration: none;
-    font-size: clamp(0.8
+    padding: 0.5rem 1rem;
+    background: var(--pop-art-yellow);
+    border: 2px solid #000;
+    box-shadow: 4px 4px 0 var(--pop-art-blue);
+    font-size: 1rem;
+  }
+
+  .content {
+    flex: 1;
+    padding: 2rem;
+    background: var(--pop-art-blue);
+    margin: 1rem;
+    border: 4px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .responsive-image {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #000;
+    box-shadow: 8px 8px 0 var(--pop-art-yellow);
+  }
+
+  .pop-art-footer {
+    background: var(--pop-art-yellow);
+    padding: 1rem;
+    border-top: 4px solid #000;
+    text-align: center;
+    box-shadow: -8px -8px 0 var(--pop-art-pink);
+  }
+
+  @media (max-width: 768px) {
+    .header-name {
+      font-size: 1.5rem;
+      transform: rotate(0);
+    }
+    
+    .nav-item {
+      font-size: 0.9rem;
+      padding: 0.4rem 0.8rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <header class="pop-art-header">
+    <div class="header-name">Aitzaz Imtiaz</div>
+    <nav class="nav-links">
+      <a href="#" class="nav-item">Home</a>
+      <a href="#" class="nav-item">Research</a>
+      <a href="#" class="nav-item">Opinions</a>
+      <a href="#" class="nav-item">Projects</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <img src="AitzazImtiaz.png" alt="Aitzaz Imtiaz" class="responsive-image">
+  </main>
+
+  <footer class="pop-art-footer">
+    <p>© 2023 Aitzaz Imtiaz. All rights reserved.</p>
+  </footer>
+</body>
+</html>
