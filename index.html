@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <style>
@@ -11,6 +11,11 @@
     --pop-art-blue: #00f7ff;
     --pop-art-yellow: #fff349;
     --body-blue: #e6f9ff;
+    --base-font-size: clamp(16px, 2vw, 20px);
+  }
+
+  * {
+    box-sizing: border-box;
   }
 
   body {
@@ -21,182 +26,42 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-size: var(--base-font-size);
   }
 
-  /* Header Styles (Same as before) */
+  /* Header Styles */
   .pop-art-header {
     background: var(--pop-art-pink);
-    padding: 1rem 2rem;
+    padding: 1rem clamp(1rem, 3vw, 2rem);
     border-bottom: 4px solid black;
-    position: relative;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
     box-shadow: 8px 8px 0 var(--pop-art-blue);
+    position: relative;
   }
 
   .header-name {
-    font-size: 2.5rem;
-    letter-spacing: 3px;
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    letter-spacing: clamp(1px, 0.5vw, 3px);
     text-transform: uppercase;
     color: black;
     text-shadow: 3px 3px var(--pop-art-yellow);
     -webkit-text-stroke: 1px white;
     transform: rotate(-2deg);
+    margin: 0.5rem 0;
   }
 
   .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: clamp(0.5rem, 2vw, 2rem);
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
 
   .nav-item {
     color: black;
     text-decoration: none;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    padding: 0.5rem 1rem;
-    background: var(--pop-art-yellow);
-    border: 2px solid black;
-    box-shadow: 4px 4px 0 var(--pop-art-blue);
-    transition: all 0.3s ease;
-  }
-
-  .nav-item:hover {
-    background: var(--pop-art-blue);
-    box-shadow: 4px 4px 0 var(--pop-art-yellow);
-    transform: translate(2px, 2px);
-  }
-
-  .pop-art-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 10px,
-      rgba(0,0,0,0.1) 10px,
-      rgba(0,0,0,0.1) 20px
-    );
-    pointer-events: none;
-  }
-
-  /* Body Content Styles */
-  .content {
-    flex: 1;
-    padding: 2rem;
-    background: var(--pop-art-blue);
-    margin: 20px;
-    border: 4px solid black;
-    box-shadow: 8px 8px 0 var(--pop-art-yellow);
-  }
-
-  /* Footer Styles */
-  .pop-art-footer {
-    background: var(--pop-art-yellow);
-    padding: 1rem 2rem;
-    border-top: 4px solid black;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: -8px -8px 0 var(--pop-art-pink);
-    margin-top: auto;
-  }
-
-  .footer-name {
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: black;
-    text-shadow: 2px 2px var(--pop-art-pink);
-    -webkit-text-stroke: 0.5px white;
-  }
-
-  .pop-art-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 10px,
-      rgba(0,0,0,0.1) 10px,
-      rgba(0,0,0,0.1) 20px
-    );
-    pointer-events: none;
-  }
-</style>
-    <style>
-        .image-container {
-            width: 100%;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .responsive-image {
-            width: 100%;
-            height: auto;
-            max-width: 800px; /* Default maximum size */
-        }
-
-        /* Mobile Phones (portrait and landscape) */
-        @media only screen and (max-width: 767px) {
-            .image-container {
-                max-width: 90%;
-            }
-            .responsive-image {
-                max-width: 100%;
-            }
-        }
-
-        /* Tablets (portrait and landscape) */
-        @media only screen and (min-width: 768px) and (max-width: 1024px) {
-            .image-container {
-                max-width: 70%;
-            }
-            .responsive-image {
-                max-width: 80%;
-            }
-        }
-
-        /* Laptops and Desktops */
-        @media only screen and (min-width: 1025px) {
-            .image-container {
-                max-width: 50%;
-            }
-            .responsive-image {
-                max-width: 100%;
-            }
-        }
-    </style>
-</head>
-<body>
-  <header class="pop-art-header">
-    <div class="header-name">Aitzaz Imtiaz</div>
-    <nav class="nav-links">
-      <a href="#" class="nav-item">Home</a>
-      <a href="/research" class="nav-item">Research</a>
-      <a href="/opinions" class="nav-item">Opinions</a>
-      <a href="/projects" class="nav-item">Projects</a>
-    </nav>
-  </header>
-
-  <main class="content">
-     <div class="image-container">
-        <img src="AitzazImtiaz.png" alt="Aitzaz Imtiaz" class="responsive-image">
-    </div>
-  </main>
-
-  <footer class="pop-art-footer">
-     <p>Hi</p>
-  </footer>
-</body>
-</html>
+    font-size: clamp(0.8
