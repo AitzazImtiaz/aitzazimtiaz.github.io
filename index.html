@@ -67,8 +67,10 @@
     margin: 1rem;
     border: 4px solid #000;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
 
   .responsive-image {
@@ -76,6 +78,26 @@
     height: auto;
     border: 3px solid #000;
     box-shadow: 8px 8px 0 var(--pop-art-yellow);
+  }
+
+  .description {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #000;
+    background: var(--pop-art-yellow);
+    padding: 1rem;
+    border: 2px solid #000;
+    box-shadow: 4px 4px 0 var(--pop-art-pink);
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+  }
+
+  .text-section {
+    background: var(--body-blue);
+    padding: 2rem;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 1.2rem;
+    color: #000;
+    text-align: left;
   }
 
   .pop-art-footer {
@@ -104,18 +126,31 @@
     <div class="header-name">Aitzaz Imtiaz</div>
     <nav class="nav-links">
       <a href="#" class="nav-item">Home</a>
-      <a href="#" class="nav-item">Research</a>
-      <a href="#" class="nav-item">Opinions</a>
-      <a href="#" class="nav-item">Projects</a>
+      <a href="repository.html" class="nav-item">Repository</a>
+      <a href="advises.html" class="nav-item">Advises</a>
+      <a href="links.html" class="nav-item">Links</a>
+      <a href="legal.html" class="nav-item">Legal</a>
     </nav>
   </header>
 
   <main class="content">
     <img src="AitzazImtiaz.png" alt="Aitzaz Imtiaz" class="responsive-image">
+    <p class="description">Me at NCAI Artificial Intelligence workshop, NUST, August 2024.</p>
   </main>
 
+  <section class="text-section">
+    <p>This website is intended to put forth my notes and stuff regarding each courses that I have been doing, aiming to bring it 
+    in a copmprehensive structured flow, and to preserve it for my future, to remember upon young age academia. Further, this work
+    might consist of out-of-the-box research that I have been doing alongside to extend beyond my studies.</p>
+    <p>Please note that the following site is of no expressions or views, or does not appear to support any views. All content under
+    the repositories is strictly academic and poses no support for any opinions. Also be aware that my <a href="advises.html">advises</a> 
+    are not representation of medical, legal or any other services and cannot act as substitute as well. These are well intended to
+    promote academia initiatives. Further, please be aware, I hold no liability, or as such responsibility for persistence and
+    accuracy under any conditions.</p>
+  </section>
+
   <footer class="pop-art-footer">
-    <p>© 2023 Aitzaz Imtiaz. All rights reserved.</p>
+    <p>© 2025 Aitzaz Imtiaz. All rights reserved.</p>
   </footer>
 </body>
 </html>
