@@ -1,153 +1,80 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <style>
-  :root {
-    --pop-art-pink: #ff69f7;
-    --pop-art-blue: #00f7ff;
-    --pop-art-yellow: #fff349;
-    --body-blue: #e6f9ff;
-  }
-
-  body {
-    margin: 0;
-    padding: 0;
-    background: var(--body-blue);
-    font-family: 'Impact', Arial, sans-serif; /* Body font as 'Impact', Arial, sans-serif */
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .pop-art-header {
-    background: var(--pop-art-pink);
-    padding: 1rem;
-    border-bottom: 4px solid #000;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 8px 8px 0 var(--pop-art-blue);
-    font-family: 'Impact', Arial, sans-serif; /* Matching font for header */
-  }
-
-  .header-name {
-    font-size: 2rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #000;
-    text-shadow: 3px 3px var(--pop-art-yellow);
-    -webkit-text-stroke: 1px #fff;
-    margin: 0.5rem;
-    transform: rotate(-2deg);
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 1rem;
-    padding: 0.5rem;
-    flex-wrap: wrap;
-  }
-
-  .nav-item {
-    color: #000;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    background: var(--pop-art-yellow);
-    border: 2px solid #000;
-    box-shadow: 4px 4px 0 var(--pop-art-blue);
-    font-size: 1rem;
-  }
-
-  .content {
-    flex: 1;
-    padding: 2rem;
-    background: var(--pop-art-blue);
-    margin: 1rem;
-    border: 4px solid #000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Body text font remains Comic Sans */
-  }
-
-  .repositories-container {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: nowrap;
-    gap: 1rem;
-    overflow-x: auto; /* Allow horizontal scrolling on smaller screens */
-  }
-
-  .repository-box {
-    background: #fff;
-    border: 3px solid #000;
-    padding: 1rem;
-    margin: 1rem;
-    box-shadow: 4px 4px 0 var(--pop-art-pink);
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
-    transition: all 0.3s ease;
-  }
-
-  .repository-box img {
-    width: 100%;
-    height: auto;
-    border-bottom: 3px solid #000;
-    object-fit: cover;
-  }
-
-  .repository-info {
-    background: var(--pop-art-yellow);
-    padding: 1rem;
-    margin-top: 1rem;
-    border: 2px solid #000;
-    box-shadow: 4px 4px 0 var(--pop-art-blue);
-  }
-
-  .repository-info h3 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #000;
-  }
-
-  .repository-info p {
-    font-size: 1rem;
-    color: #000;
-  }
-
-  .repository-info a {
-    text-decoration: none;
-    color: #000;
-    background: var(--pop-art-pink);
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    box-shadow: 4px 4px 0 var(--pop-art-blue);
-  }
-
-  .pop-art-footer {
-    background: var(--pop-art-yellow);
-    padding: 1rem;
-    border-top: 4px solid #000;
-    text-align: center;
-    box-shadow: -8px -8px 0 var(--pop-art-pink);
-    font-family: 'Impact', Arial, sans-serif; /* Matching font for footer */
-  }
+  /* Existing styles remain the same until media queries */
 
   @media (max-width: 768px) {
     .header-name {
       font-size: 1.5rem;
       transform: rotate(0);
+      text-align: center;
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+    
+    .nav-links {
+      width: 100%;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0;
     }
     
     .nav-item {
+      font-size: 0.8rem;
+      padding: 0.3rem 0.6rem;
+      white-space: nowrap;
+    }
+
+    .content {
+      margin: 0.5rem;
+      padding: 1rem;
+    }
+
+    .repositories-container {
+      flex-direction: column;
+      align-items: center;
+      overflow-x: visible;
+    }
+
+    .repository-box {
+      margin: 0.5rem 0;
+      max-width: 100%;
+      width: 90%;
+    }
+
+    .repository-info h3 {
+      font-size: 1.1rem;
+    }
+
+    .repository-info p {
       font-size: 0.9rem;
-      padding: 0.4rem 0.8rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header-name {
+      font-size: 1.2rem;
+    }
+
+    .nav-item {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.4rem;
+    }
+
+    .content h3 {
+      font-size: 1rem;
+    }
+
+    .repository-info a {
+      padding: 0.3rem 0.6rem;
+      font-size: 0.9rem;
+    }
+
+    .pop-art-footer p {
+      font-size: 0.8rem;
     }
   }
 </style>
@@ -206,4 +133,3 @@
 
 </body>
 </html>
-
