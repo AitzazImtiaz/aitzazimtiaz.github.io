@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infected Topics - All of Us Are Math</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Caveat&family=Nosifer&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+
+        /* === OUTBREAK ZONE CONTAINERS === */
+        .quarantine-zone {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(17,17,17,0.95);
+            border: 3px solid #f44;
+            border-radius: 10px;
+        }
+
+        .zone-title {
+            font-family: 'Nosifer', cursive;
+            color: #0ff;
+            text-shadow: 0 0 15px #0ff;
+            margin-bottom: 2rem;
+            border-bottom: 2px dashed #f44;
+            padding-bottom: 1rem;
+        }
+
+        /* === CHAPTER GRID SYSTEM === */
+        .outbreak-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .chapter-node {
+            background: #1a1a1a;
+            padding: 1.5rem;
+            border-left: 5px solid #f44;
+            position: relative;
+            transition: all 0.3s ease;
+            cursor: crosshair;
+        }
+
+        .chapter-node:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(255,68,68,0.3);
+        }
+
+        .infection-status {
+            color: #f44;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        /* === INFECTION PANEL === */
+        .infection-panel {
+            position: fixed;
+            bottom: -100%;
+            left: 0;
+            right: 0;
+            background: #111;
+            border-top: 3px solid #f44;
+            padding: 2rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1000;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+
+        .infection-panel.active {
+            bottom: 0;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            color: #f44;
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .close-btn:hover {
+            transform: rotate(90deg);
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Emergency Alert -->
+    <div class="alert-banner" id="alertBanner">
+        <span class="blink">🚨 CODE RED: EXAM OUTBREAK DETECTED 🚨</span>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <img src="header.webp" alt="Math Apocalypse" class="header-img">
+        <div class="overlay">
+            <h1 data-text="ALL_OF_US_ARE_MATH">ALL OF US ARE MATH</h1>
+            <p class="tagline">Survival Difficulty: A2 - Outbreak is Inevitable</p>
+            <div class="infection-meter">
+                <div class="infection-bar" id="infectionBar"></div>
+                <span class="infection-text">SYLLABUS COMPLETION: UNKNOWN</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="top-nav">
+        <ul>
+            <li><a href="index.html" class="nav-link"><i class="fas fa-biohazard"></i> Home Base</a></li>
+            <li><a href="topics.html" class="nav-link active"><i class="fas fa-brain"></i> Infection Topics</a></li>
+            <li><a href="practice.html" class="nav-link"><i class="fas fa-crosshairs"></i> Target Practice</a></li>
+            <li><a href="papers.html" class="nav-link"><i class="fas fa-file-contract"></i> Contaminated Papers</a></li>
+            <li><a href="safezone.html" class="nav-link"><i class="fas fa-shield-virus"></i> Quarantine Zone</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        Hi
+        <!-- Pure Mathematics Outbreak Zone -->
+        <div class="quarantine-zone">
+            <h2 class="zone-title"><i class="fas fa-skull-crossbones"></i> PURE MATHEMATICS GROUND ZERO</h2>
+            <div class="outbreak-grid">
+                <!-- Algebra -->
+                <div class="chapter-node" data-chapter="1">
+                    <h3>Algebra</h3>
+                    <div class="infection-status">☣ 85% INFECTED</div>
+                </div>
+
+                <!-- Logarithm/Exponential -->
+                <div class="chapter-node" data-chapter="2">
+                    <h3>Logarithm & Exponential</h3>
+                    <div class="infection-status">☣ 92% INFECTED</div>
+                </div>
+
+                <!-- Trigonometry -->
+                <div class="chapter-node" data-chapter="3">
+                    <h3>Trigonometry</h3>
+                    <div class="infection-status">☣ 88% INFECTED</div>
+                </div>
+
+                <!-- Differentiation -->
+                <div class="chapter-node" data-chapter="4">
+                    <h3>Differentiation</h3>
+                    <div class="infection-status">☣ 95% INFECTED</div>
+                </div>
+
+                <!-- Integration -->
+                <div class="chapter-node" data-chapter="5">
+                    <h3>Integration</h3>
+                    <div class="infection-status">☣ 90% INFECTED</div>
+                </div>
+
+                <!-- Differential Equations -->
+                <div class="chapter-node" data-chapter="6">
+                    <h3>Differential Equations</h3>
+                    <div class="infection-status">☣ 85% INFECTED</div>
+                </div>
+
+                <!-- Numerical Solutions -->
+                <div class="chapter-node" data-chapter="7">
+                    <h3>Numerical Solutions</h3>
+                    <div class="infection-status">☣ 82% INFECTED</div>
+                </div>
+
+                <!-- Vectors -->
+                <div class="chapter-node" data-chapter="8">
+                    <h3>Vectors</h3>
+                    <div class="infection-status">☣ 87% INFECTED</div>
+                </div>
+
+                <!-- Complex Numbers -->
+                <div class="chapter-node" data-chapter="9">
+                    <h3>Complex Numbers</h3>
+                    <div class="infection-status">☣ 84% INFECTED</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistics Contamination Zone -->
+        <div class="quarantine-zone">
+            <h2 class="zone-title"><i class="fas fa-chart-bar"></i> STATISTICAL HOT ZONE</h2>
+            <div class="outbreak-grid">
+                <!-- Data Representation -->
+                <div class="chapter-node" data-chapter="10">
+                    <h3>Data Representation</h3>
+                    <div class="infection-status">☣ 78% INFECTED</div>
+                </div>
+
+                <!-- Permutations/Combinations -->
+                <div class="chapter-node" data-chapter="11">
+                    <h3>Permutations & Combinations</h3>
+                    <div class="infection-status">☣ 81% INFECTED</div>
+                </div>
+
+                <!-- Probability -->
+                <div class="chapter-node" data-chapter="12">
+                    <h3>Probability</h3>
+                    <div class="infection-status">☣ 89% INFECTED</div>
+                </div>
+
+                <!-- Random Variables -->
+                <div class="chapter-node" data-chapter="13">
+                    <h3>Random Variables</h3>
+                    <div class="infection-status">☣ 83% INFECTED</div>
+                </div>
+
+                <!-- Normal Distribution -->
+                <div class="chapter-node" data-chapter="14">
+                    <h3>Normal Distribution</h3>
+                    <div class="infection-status">☣ 86% INFECTED</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Infection Panel -->
+        <div class="infection-panel" id="infectionPanel">
+            <span class="close-btn" onclick="closePanel()">✕</span>
+            <h2 id="panelTitle"></h2>
+            <ul class="topic-list" id="panelTopics"></ul>
+        </div>
+    </main>
+
+    <footer>
+        <p class="easter-egg" onclick="revealCure()">© 2025 MATH QUARANTINE AUTHORITY</p>
+        <p class="disclaimer">WARNING: Improper integration may lead to mental decay</p>
+    </footer>
+<script>
+    // Complete Chapter Data with Outbreak Locations
+    const chapterData = {
+        1: {
+            topics: ["Absolute Mod", "Division of Polynomials", "Factor and Remainder Theorem", "Partial Fractions", "Binomial Theorem"],
+            location: "Class 2-5 (Outbreak Origin Classroom)"
+        },
+        2: {
+            topics: ["Logarithm and Indices", "Exponential functions and Graphs", "Logarithms and Inequality", "Logarithm to Linear form"],
+            location: "Science Lab (Viral Mutation Site)"
+        },
+        3: {
+            topics: ["6 Trigonometric Functions", "Identities and Double Angle formulae", "Comparison to an expression"],
+            location: "Rooftop (Survivor Observation Deck)"
+        },
+        4: {
+            topics: ["Trigonometric Identities Differentiation", "Products & Quotient Rule", "Parametric and Implicit Differentiation"],
+            location: "Gymnasium (Mass Conversion Zone)"
+        },
+        5: {
+            topics: ["Reverse Differentiation method", "Trigonometrical Use in Integration", "Integration of Natural Logarithms", "Integration by Substitution"],
+            location: "Cafeteria (Resource Depletion Analysis)"
+        },
+        6: {
+            topics: ["Formulae Statement", "First Order Differential Equation", "Initial Condition Formulation", "Interpret Solution"],
+            location: "Nurse's Office (Patient Zero Ground Zero)"
+        },
+        7: {
+            topics: ["Approximation", "Iteration"],
+            location: "Library (Quarantine Strategy Center)"
+        },
+        8: {
+            topics: ["Standard Notation", "Three Dimension Magnitude", "Unit and Position Vector", "Skewed Lines", "Scalar Product"],
+            location: "Parking Lot (Evacuation Vector Analysis)"
+        },
+        9: {
+            topics: ["Definition and Basics", "Operation in Cartesian Form", "Solve Polynomials", "Argand Form", "Square Root of Complex Numbers", "Illustrate Simple Equations"],
+            location: "Music Room (Signal Frequency Hub)"
+        },
+        10: {
+            topics: ["Presenting Raw Statistical Data", "Stem and Leaf diagram", "Central Tendency Theorem", "Calculate & Use Coded Data"],
+            location: "Broadcast Room (Infection Data HQ)"
+        },
+        11: {
+            topics: ["Use in Simple Problems", "Problems in Arrangement form"],
+            location: "Auditorium (Survivor Group Formations)"
+        },
+        12: {
+            topics: ["Addition and Multiplication", "Exclusive and Independent Events", "Conditional Probability"],
+            location: "School Gates (Containment Failure Zone)"
+        },
+        13: {
+            topics: ["Calculate E(X) and Var(X)", "Binomial and Geometric Distribution", "Expectation and Variance for Distribution"],
+            location: "Computer Lab (Outcome Prediction Center)"
+        },
+        14: {
+            topics: ["Normal Distribution Properties", "Z-Scores Calculation", "Standardization Process", "Probability Estimation"],
+            location: "Rooftop Garden (Final Extraction Analysis)"
+        }
+    };
+
+    // Containment System
+    let containedChapters = new Set();
+    const totalChapters = 14;
+
+    // Chapter Interaction
+    document.querySelectorAll('.chapter-node').forEach(node => {
+        node.addEventListener('click', function() {
+            const chapter = this.dataset.chapter;
+            if(!containedChapters.has(chapter)) {
+                containedChapters.add(chapter);
+                this.style.background = '#1a5a00';
+                this.style.borderLeftColor = '#0ff';
+                updateContainment();
+            }
+            showChapter(chapter);
+        });
+    });
+
+    function updateContainment() {
+        const percent = Math.round((containedChapters.size / totalChapters) * 100);
+        document.getElementById('infectionText').textContent = `SYLLABUS COMPLETION: ${percent}%`;
+        document.getElementById('infectionBar').style.width = `${percent}%`;
+        
+        if(percent === 100) {
+            document.getElementById('alertBanner').innerHTML = 
+                '<span class="blink">🎉 VIRUS CONTAINED! FINAL EXAM ESCAPED 🎉</span>';
+        }
+    }
+
+    function showChapter(chapter) {
+        const panel = document.getElementById('infectionPanel');
+        const data = chapterData[chapter];
+        
+        document.getElementById('panelTitle').innerHTML = `
+            <i class="fas fa-virus"></i> 
+            CHAPTER ${chapter}: ${document.querySelector(`[data-chapter="${chapter}"] h3`).textContent}
+        `;
+        
+        document.getElementById('panelLocation').innerHTML = `
+            <i class="fas fa-map-marked-alt"></i>
+            OUTBREAK EPICENTER: ${data.location}
+        `;
+        
+        document.getElementById('panelTopics').innerHTML = `
+            <h3 class="infection-subtitle">Contaminated Subtopics:</h3>
+            ${data.topics.map(t => `<li><i class="fas fa-biohazard"></i> ${t}</li>`).join('')}
+        `;
+
+        panel.classList.add('active');
+        document.addEventListener('keydown', handleKeyPress);
+    }
+
+    function closePanel() {
+        document.getElementById('infectionPanel').classList.remove('active');
+        document.removeEventListener('keydown', handleKeyPress);
+    }
+
+    function handleKeyPress(event) {
+        if(event.key === 'Escape') closePanel();
+    }
+
+    // Initialize outbreak system
+    document.addEventListener('DOMContentLoaded', () => {
+        // Click outside to close
+        document.getElementById('infectionPanel').addEventListener('click', (e) => {
+            if(e.target === document.getElementById('infectionPanel')) closePanel();
+        });
+
+        // Easter Egg initialization
+        document.querySelector('footer').addEventListener('click', revealCure);
+    });
+
+    // Secret Containment Protocol
+    function revealCure() {
+        const formula = prompt("Enter containment formula (∫e^x dx):");
+        if(formula?.toLowerCase().includes("e^x+c")) {
+            containedChapters = new Set([...Array(totalChapters).keys()].map(n => (n+1).toString()));
+            document.querySelectorAll('.chapter-node').forEach(node => {
+                node.style.background = '#1a5a00';
+                node.style.borderLeftColor = '#0ff';
+            });
+            updateContainment();
+            alert("ANTIDOTE ACTIVATED! ALL TOPICS QUARANTINED!");
+        }
+    }
+</script>
+
+<style>
+    /* Infection Panel Enhancements */
+    .infection-panel {
+        background: rgba(17,17,17,0.98);
+        border-top: 5px solid #f44;
+        box-shadow: 0 -10px 30px rgba(255,68,68,0.2);
+    }
+
+    #panelTitle {
+        color: #0ff;
+        border-bottom: 2px dashed #f44;
+        padding-bottom: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #panelLocation {
+        background: rgba(255,68,68,0.1);
+        padding: 1rem;
+        margin: 1rem 0;
+        border-radius: 5px;
+        color: #ff9090;
+        font-family: 'Fira Code', monospace;
+    }
+
+    .infection-subtitle {
+        color: #f44;
+        margin: 1.5rem 0 1rem;
+        font-family: 'Nosifer', cursive;
+    }
+
+    #panelTopics li {
+        padding: 0.8rem;
+        margin: 0.5rem 0;
+        background: rgba(255,68,68,0.05);
+        border-left: 3px solid #f44;
+        transition: all 0.3s ease;
+    }
+
+    #panelTopics li:hover {
+        background: rgba(255,68,68,0.15);
+        transform: translateX(10px);
+    }
+
+    .fa-biohazard {
+        color: #0ff;
+        margin-right: 0.8rem;
+    }
+</style>
+</body>
+</html>

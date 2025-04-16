@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All of Us Are Math - Survive A-Level Mathematics</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Caveat&family=Nosifer&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Emergency Alert Banner -->
+  <div class="alert-banner" id="alertBanner">
+    <span class="blink">🚨 CODE RED: EXAM OUTBREAK DETECTED 🚨</span>
+  </div>
+
+  <header>
+    <img src="header.webp" alt="Math Apocalypse" class="header-img">
+    <div class="overlay">
+      <h1 data-text="ALL_OF_US_ARE_MATH">ALL OF US ARE MATH</h1>
+      <p class="tagline">Survival Difficulty: A2 - Outbreak is Inevitable</p>
+      <div class="infection-meter">
+        <div class="infection-bar" id="infectionBar"></div>
+        <span class="infection-text">SYLLABUS COMPLETION: UNKNOWN</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="top-nav">
+    <ul>
+      <li><a href="index.html" class="nav-link"><i class="fas fa-biohazard"></i> Home Base</a></li>
+      <li><a href="topics.html" class="nav-link"><i class="fas fa-brain"></i> Infection Topics</a></li>
+      <li><a href="practice.html" class="nav-link"><i class="fas fa-crosshairs"></i> Target Practice</a></li>
+      <li><a href="papers.html" class="nav-link"><i class="fas fa-file-contract"></i> Contaminated Papers</a></li>
+      <li><a href="safezone.html" class="nav-link"><i class="fas fa-shield-virus"></i> Quarantine Zone</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="home">
+      <h2 class="glitch" data-text="WELCOME_TO_THE_APOCALYPSE">WELCOME TO THE APOCALYPSE</h2>
+      <p>The following website is based on hope, and on fight and declaring a war on evil Cambridge International Education
+      to win GCE A Level Mathematics contamination.</p>
+      <div class="typewriter">
+        <p>> INITIALIZING EMERGENCY PROTOCOLS...</p>
+        <p>> SYSTEM DATE: 2025-EXAM-CYCLE</p>
+        <p>> LOADING SURVIVAL GUIDES...</p>
+      </div>
+      
+      <div class="emergency-grid">
+        <div class="crisis-card" data-subject="pure">
+          <h3><i class="fas fa-skull-crossbones"></i> PURE MATHS OUTBREAK</h3>
+          <p>Vectors spreading rapidly • Calculus infection rate: 92%</p>
+          <button class="contain-button" onclick="containOutbreak('pure')">CONTAIN CHAPTER</button>
+        </div>
+        
+        <div class="crisis-card" data-subject="stats">
+          <h3><i class="fas fa-chart-bar"></i> STATISTICAL CONTAMINATION</h3>
+          <p>Probability vectors detected • Normal distribution compromised</p>
+          <button class="contain-button" onclick="containOutbreak('stats')">DECONTAMINATE</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="transmission">
+      <h2><i class="fas fa-radiation"></i> KNOWLEDGE TRANSMISSION</h2>
+      <div class="outbreak-map">
+        <h1>Pure Mathematics </h1>
+        <div class="map-node" data-chapter="1">Chapter 01: Algebra</div>
+        <div class="map-node" data-chapter="2">Chapter 02: Logarithm and Exponential Functions</div>
+        <div class="map-node" data-chapter="3">Chapter 03: Trigonometry</div>
+        <div class="map-node" data-chapter="4">Chapter 04: Differentiation</div>
+        <div class="map-node" data-chapter="5">Chapter 05: Integration</div>
+        <div class="map-node" data-chapter="6">Chapter 06: Differential Equations</div>
+        <div class="map-node" data-chapter="7">Chapter 07: Numerical Solution of Equations</div>
+        <div class="map-node" data-chapter="8">Chapter 08: Vectors</div>
+        <div class="map-node" data-chapter="9">Chapter 09: Complex Numbers</div>
+        <h1>Statistics </h1>
+        <div class="map-node" data-chapter="10">Chapter 10: Representation of Data</div>
+        <div class="map-node" data-chapter="11">Chapter 11: Permutation and Combination</div>
+        <div class="map-node" data-chapter="12">Chapter 12: Probability</div>
+        <div class="map-node" data-chapter="13">Chapter 13: Discrete and Random Variables</div>
+        <div class="map-node" data-chapter="14">Chapter 14: Normal Distribution</div>
+        <div class="infection-path"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="easter-egg" onclick="revealCure()">© 2025 MATH QUARANTINE AUTHORITY</p>
+    <p class="disclaimer">WARNING: Improper integration may lead to mental decay</p>
+  </footer>
+
+  <!-- Zombie Modal -->
+  <div id="zombieModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>QUARANTINE BREACH DETECTED</h2>
+      <p>Enter antidote formula to continue:</p>
+      <input type="password" id="antidoteInput" placeholder="∫ e^x dx = ?">
+      <button onclick="checkAntidote()">APPLY ANTIDOTE</button>
+    </div>
+  </div>
+
+  <script>
+    // Infection Progress Simulation
+    let infection = 0;
+    const infectionBar = document.getElementById('infectionBar');
+    const updateInfection = () => {
+      infection = Math.min(infection + Math.random() * 2, 100);
+      infectionBar.style.width = `${infection}%`;
+      if(infection >= 90) triggerOutbreak();
+      setTimeout(updateInfection, 3000);
+    };
+    updateInfection();
+
+    // Outbreak Emergency Protocol
+    function triggerOutbreak() {
+      document.body.classList.add('outbreak-active');
+      document.getElementById('alertBanner').style.display = 'block';
+      new Audio('warning-siren.mp3').play();
+    }
+
+    // Antidote Verification System
+    function checkAntidote() {
+      const answer = document.getElementById('antidoteInput').value;
+      if(answer.toLowerCase().includes("e^x+c")) {
+        document.getElementById('zombieModal').style.display = "none";
+        infection = 0;
+      } else {
+        alert("INCORRECT FORMULA! INFECTION SPREADING!");
+        infection += 15;
+      }
+    }
+
+    // Easter Egg Reveal
+    function revealCure() {
+      const easterEgg = new Audio('zombie-groan.mp3');
+      easterEgg.play();
+      document.querySelector('footer').style.textShadow = '0 0 10px #ff0000';
+      setTimeout(() => document.getElementById('zombieModal').style.display = "block", 2000);
+    }
+
+    // Interactive Containment Protocol
+    function containOutbreak(subject) {
+      const cards = document.querySelectorAll(`[data-subject="${subject}"]`);
+      cards.forEach(card => {
+        card.classList.add('contained');
+        card.querySelector('button').disabled = true;
+      });
+      infection = Math.max(infection - 15, 0);
+    }
+
+    // Typewriter Effect
+    const typewriterElements = document.querySelectorAll('.typewriter p');
+    typewriterElements.forEach((el, index) => {
+      const text = el.innerText;
+      el.innerHTML = '';
+      let i = 0;
+      setTimeout(() => {
+        const typeInterval = setInterval(() => {
+          el.innerHTML += text[i];
+          if(++i === text.length) clearInterval(typeInterval);
+        }, 50);
+      }, index * 1000);
+    });
+  </script>
+</body>
+</html>
