@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contaminated Papers - Survive the Math Outbreak</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    /* Custom papers page styles */
+    .papers-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+
+    .component-section {
+      background: rgba(20,0,0,0.9);
+      border: 1px solid #ff4d4d;
+      border-radius: 8px;
+      margin: 2rem 0;
+      padding: 1rem;
+    }
+
+    .component-header {
+      cursor: pointer;
+      padding: 1rem;
+      background: #5a0000;
+      border-radius: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .component-header h2 {
+      margin: 0;
+      color: #ff4d4d;
+      font-family: 'Nosifer', cursive;
+      font-size: 1.4rem;
+    }
+
+    .session-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+
+    .session-box {
+      background: rgba(40,0,0,0.9);
+      border: 1px solid #ff4d4d;
+      border-radius: 6px;
+      padding: 1rem;
+    }
+
+    .paper-item {
+      margin: 0.8rem 0;
+      padding: 0.8rem;
+      background: rgba(60,0,0,0.7);
+      border-radius: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .paper-item a {
+      color: #ff4d4d;
+      text-decoration: none;
+      transition: color 0.3s;
+      margin-left: 10px;
+    }
+
+    .paper-item a:hover {
+      color: #ff0000;
+    }
+
+    .variant-badge {
+      background: #ff4d4d22;
+      padding: 2px 8px;
+      border-radius: 3px;
+      font-size: 0.8rem;
+    }
+
+    .search-box {
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .search-input {
+      padding: 0.8rem;
+      width: 100%;
+      max-width: 500px;
+      background: rgba(20,0,0,0.9);
+      border: 1px solid #ff4d4d;
+      border-radius: 4px;
+      color: white;
+      font-family: 'Fira Code', monospace;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Caveat&family=Nosifer&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <img src="https://aitzazimtiaz.github.io/CIES/math/header.webp" alt="Math Apocalypse" class="header-img">
+    <div class="overlay">
+      <h1 data-text="ARCHIVE">CONTAMINATED PAPERS</h1>
+      <p class="tagline">Survival Difficulty: S1-P3 – Handle with Care</p>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="top-nav">
+    <ul>
+      <li><a href="../index.html"><i class="fas fa-biohazard"></i> Home Base</a></li>
+      <li><a href="../topics.html"><i class="fas fa-brain"></i> Infection Topics</a></li>
+      <li><a href="../practice.html"><i class="fas fa-crosshairs"></i> Target Practice</a></li>
+      <li><a href="../papers.html"><i class="fas fa-file-contract"></i> Contaminated Papers</a></li>
+      <li><a href="../safezone.html"><i class="fas fa-shield-virus"></i> Quarantine Zone</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="papers-container">
+    <div class="search-box">
+      <input type="text" class="search-input" placeholder="[SYSTEM] Search contaminated papers...">
+    </div>
+
+    <!-- Pure Mathematics 3 Section -->
+    <div class="component-section">
+      <div class="component-header">
+        <h2>☣️ Pure Mathematics 3 (9709/32)</h2>
+        <span class="toggle">▼</span>
+      </div>
+      <div class="session-grid">
+        <!-- May/June Papers -->
+        <div class="session-box">
+          <h3>May/June Outbreak</h3>
+          <div class="paper-item">
+            <div>
+              <span class="variant-badge">Variant 1</span>
+              <span>2023 Strain</span>
+            </div>
+            <div>
+              <a href="papers/9709_s23_qp_32.pdf" download><i class="fas fa-file-pdf"></i></a>
+              <a href="papers/9709_s23_ms_32.pdf" download><i class="fas fa-scroll"></i></a>
+            </div>
+          </div>
+          <div class="paper-item">
+            <div>
+              <span class="variant-badge">Variant 2</span>
+              <span>2023 Strain</span>
+            </div>
+            <div>
+              <a href="papers/9709_s23_qp_32.pdf" download><i class="fas fa-file-pdf"></i></a>
+              <a href="papers/9709_s23_ms_32.pdf" download><i class="fas fa-scroll"></i></a>
+            </div>
+          </div>
+          <!-- Add more years as needed -->
+        </div>
+
+        <!-- October/November Papers -->
+        <div class="session-box">
+          <h3>Oct/Nov Pandemic</h3>
+          <div class="paper-item">
+            <div>
+              <span class="variant-badge">Variant 1</span>
+              <span>2023 Strain</span>
+            </div>
+            <div>
+              <a href="papers/9709_w23_qp_32.pdf" download><i class="fas fa-file-pdf"></i></a>
+              <a href="papers/9709_w23_ms_32.pdf" download><i class="fas fa-scroll"></i></a>
+            </div>
+          </div>
+          <div class="paper-item">
+            <div>
+              <span class="variant-badge">Variant 2</span>
+              <span>2022 Strain</span>
+            </div>
+            <div>
+              <a href="papers/9709_w22_qp_32.pdf" download><i class="fas fa-file-pdf"></i></a>
+              <a href="papers/9709_w22_ms_32.pdf" download><i class="fas fa-scroll"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Probability & Statistics 1 Section -->
+    <div class="component-section">
+      <div class="component-header">
+        <h2>🧮 Probability & Statistics 1 (9709/52)</h2>
+        <span class="toggle">▼</span>
+      </div>
+      <div class="session-grid">
+        <!-- May/June Papers -->
+        <div class="session-box">
+          <h3>May/June Infection</h3>
+          <div class="paper-item">
+            <div>
+              <span class="variant-badge">Variant 1</span>
+              <span>2023 Strain</span>
+            </div>
+            <div>
+              <a href="papers/9709_s23_qp_52.pdf" download><i class="fas fa-file-pdf"></i></a>
+              <a href="papers/9709_s23_ms_52.pdf" download><i class="fas fa-scroll"></i></a>
+            </div>
+          </div>
+          <div class="paper-item">
+            <div>
+              <span class="variant-badge">Variant 2</span>
+              <span>2023 Strain</span>
+            </div>
+            <div>
+              <a href="papers/9709_s23_qp_52.pdf" download><i class="fas fa-file-pdf"></i></a>
+              <a href="papers/9709_s23_ms_52.pdf" download><i class="fas fa-scroll"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- October/November Papers -->
+        <div class="session-box">
+          <h3>Oct/Nov Contagion</h3>
+          <div class="paper-item">
+            <div>
+              <span class="variant-badge">Variant 1</span>
+              <span>2023 Strain</span>
+            </div>
+            <div>
+              <a href="papers/9709_w23_qp_52.pdf" download><i class="fas fa-file-pdf"></i></a>
+              <a href="papers/9709_w23_ms_52.pdf" download><i class="fas fa-scroll"></i></a>
+            </div>
+          </div>
+          <div class="paper-item">
+            <div>
+              <span class="variant-badge">Variant 2</span>
+              <span>2022 Strain</span>
+            </div>
+            <div>
+              <a href="papers/9709_w22_qp_52.pdf" download><i class="fas fa-file-pdf"></i></a>
+              <a href="papers/9709_w22_ms_52.pdf" download><i class="fas fa-scroll"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p class="easter-egg" onclick="revealCure()">© 2025 MATH QUARANTINE AUTHORITY</p>
+    <p class="disclaimer">WARNING: Improper statistical analysis may accelerate viral spread</p>
+  </footer>
+
+  <script>
+    // Accordion functionality
+    document.querySelectorAll('.component-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const content = header.parentElement.querySelector('.session-grid');
+        content.style.display = content.style.display === 'none' ? 'grid' : 'none';
+        header.querySelector('.toggle').textContent = 
+          content.style.display === 'none' ? '▼' : '▲';
+      });
+    });
+
+    // Search functionality
+    document.querySelector('.search-input').addEventListener('input', (e) => {
+      const searchTerm = e.target.value.toLowerCase();
+      document.querySelectorAll('.paper-item').forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(searchTerm) ? 'flex' : 'none';
+      });
+    });
+
+    // Easter egg function
+    function revealCure() {
+      new Audio('../zombie-groan.mp3').play();
+      document.querySelector('footer').style.textShadow = '0 0 10px #ff0000';
+      setTimeout(() => alert("Antidote Acquired! Keep solving papers to maintain immunity!"), 2000);
+    }
+  </script>
+</body>
+</html>
