@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter Template – Survive the Math Outbreak</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    main {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+      padding: 2rem;
+      align-items: start;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin: 1rem 2rem;
+      padding: 0.5rem 1rem;
+      background: #5a0000;
+      color: #fff;
+      border-radius: 4px;
+      text-decoration: none;
+      box-shadow: 0 0 10px rgba(255,0,60,0.5);
+    }
+
+    .pdf-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .pdf-box {
+      background: rgba(26,0,0,0.8);
+      border: 1px solid #ff4d4d;
+      border-radius: 4px;
+      padding: 0.5rem;
+      flex: 1 1 140px;
+      text-align: center;
+    }
+
+    .pdf-box a {
+      color: #ff4d4d;
+      font-weight: bold;
+    }
+
+    .infobox {
+      background: rgba(10,0,0,0.9);
+      border: 1px solid #ff4d4d;
+      border-radius: 8px;
+      padding: 1rem;
+      position: sticky;
+      top: 2rem;
+      align-self: start;
+      height: auto;
+    }
+
+    .infobox img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+
+    .infobox h3 {
+      margin-bottom: 0.5rem;
+      color: #ff4d4d;
+      font-size: 1.5rem;
+    }
+
+    .infobox p {
+      margin: 0.3rem 0;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .summary { margin-top: 2rem; }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Caveat&family=Nosifer&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <img src="https://aitzazimtiaz.github.io/CIES/math/header.webp" alt="Math Apocalypse" class="header-img">
+    <div class="overlay">
+      <h1 data-text="CHAPTER_X">CHAPTER X</h1>
+      <p class="tagline">Survival Difficulty: A2 – Containing the Outbreak</p>
+    </div>
+  </header>
+  <nav class="top-nav">
+    <ul>
+      <li><a href="https://aitzazimtiaz.github.io/CIES/math/index.html"><i class="fas fa-biohazard"></i> Home Base</a></li>
+      <li><a href="https://aitzazimtiaz.github.io/CIES/math/index.html"><i class="fas fa-brain"></i> Infection Topics</a></li>
+      <li><a href="https://aitzazimtiaz.github.io/CIES/math/practice.html"><i class="fas fa-crosshairs"></i> Target Practice</a></li>
+      <li><a href="https://aitzazimtiaz.github.io/CIES/math/papers.html"><i class="fas fa-file-contract"></i> Contaminated Papers</a></li>
+      <li><a href="https://aitzazimtiaz.github.io/CIES/math/safezone.html"><i class="fas fa-shield-virus"></i> Quarantine Zone</a></li>
+    </ul>
+  </nav>
+
+  <a href="https://aitzazimtiaz.github.io/CIES/math/practice.html" class="back-button"><i class="fas fa-arrow-left"></i> Back to Practice</a>
+
+  <main>
+    <div class="content">
+      <div class="pdf-list" id="pdfList">
+      </div>
+
+      <section class="summary">
+        <h2>Chapter Summary</h2>
+        <p>Write your LaTeX‑formatted summary below:</p>
+        <p>$$
+          % Integral example
+          \int e^x \, dx = e^x + C
+        $$</p>
+      </section>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+
+    <aside class="infobox">
+      <img src="../images/onjo.avif" alt="Character Name">
+      <h3>Character Name</h3>
+      <p><strong>Expertise:</strong> Algebra, Calculus</p>
+      <p><strong>Role:</strong> Outbreak Strategist</p>
+      <p><strong>Quote:</strong> “Stand firm, solve for x, save the world.”</p>
+      <p><strong>Infection Status:</strong> 32% Contained</p>
+      <p><strong>Special Skills:</strong></p>
+      <ul>
+        <li>Quadratic Equation Optimization</li>
+        <li>Epidemic Rate Modeling</li>
+        <li>Viral Derivative Containment</li>
+      </ul>
+      <p><strong>Current Mission:</strong> Containing the exponential spread of the ∫-Virus through logarithmic social distancing measures.</p>
+    </aside>
+  </main>
+
+  <footer>
+    <p class="easter-egg" onclick="revealCure()">© 2025 MATH QUARANTINE AUTHORITY</p>
+    <p class="disclaimer">WARNING: Improper integration may lead to mental decay</p>
+  </footer>
+
+  <script>
+    const pdfs = [
+      { label: 'Topical Questions', file: 'chXX-topical.pdf' },
+      { label: 'Summary Notes',    file: 'chXX-summary.pdf' }
+    ];
+    const list = document.getElementById('pdfList');
+    pdfs.forEach(({ label, file }) => {
+      const box = document.createElement('div');
+      box.className = 'pdf-box';
+      const link = document.createElement('a');
+      link.href = file;
+      link.download = '';
+      link.textContent = label;
+      box.appendChild(link);
+      list.appendChild(box);
+    });
+
+    function revealCure() {
+      new Audio('../zombie-groan.mp3').play();
+      document.querySelector('footer').style.textShadow = '0 0 10px #ff0000';
+      setTimeout(() => alert("Cure revealed! Keep practicing for survival!"), 2000);
+    }
+  </script>
+</body>
+</html>
