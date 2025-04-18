@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All of Us Are Math - Survive A-Level Mathematics</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Caveat&family=Nosifer&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Emergency Alert Banner -->
+  <div class="alert-banner" id="alertBanner">
+    <span class="blink">🚨 CODE RED: EXAM OUTBREAK DETECTED 🚨</span>
+  </div>
+
+  <header>
+    <img src="header.webp" alt="Math Apocalypse" class="header-img">
+    <div class="overlay">
+      <h1 data-text="ALL_OF_US_ARE_MATH">ALL OF US ARE MATH</h1>
+      <p class="tagline">Survival Difficulty: A2 - Outbreak is Inevitable</p>
+      <div class="infection-meter">
+        <div class="infection-bar" id="infectionBar"></div>
+        <span class="infection-text">SYLLABUS COMPLETION: UNKNOWN</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="top-nav">
+    <ul>
+      <li><a href="index.html" class="nav-link"><i class="fas fa-biohazard"></i> Home Base</a></li>
+      <li><a href="topics.html" class="nav-link"><i class="fas fa-brain"></i> Infection Topics</a></li>
+      <li><a href="practice.html" class="nav-link"><i class="fas fa-crosshairs"></i> Target Practice</a></li>
+      <li><a href="papers.html" class="nav-link"><i class="fas fa-file-contract"></i> Contaminated Papers</a></li>
+      <li><a href="safezone.html" class="nav-link"><i class="fas fa-shield-virus"></i> Quarantine Zone</a></li>
+    </ul>
+  </nav>
+<main>
+<a href="https://www.youtube.com/playlist?list=PL3OnD7TInbzU1TMqyVMxj2obo8YlphQsj" target="_blank">
+  <img src="https://img.youtube.com/vi/x1jHMO5CGMg/hqdefault.jpg" alt="Watch Playlist on YouTube" style="width:100%; max-width:560px;">
+</a>
+
+</main>
+
+  <footer>
+    <p class="easter-egg" onclick="revealCure()">© 2025 MATH QUARANTINE AUTHORITY</p>
+    <p class="disclaimer">WARNING: Improper integration may lead to mental decay</p>
+  </footer>
+
+  <script>
+    function revealCure() {
+      new Audio('zombie-groan.mp3').play();
+      document.querySelector('footer').style.textShadow = '0 0 10px #ff0000';
+      setTimeout(() => alert("Cure revealed! Keep practicing for survival!"), 2000);
+    }
+  </script>
+</body>
+</html>
