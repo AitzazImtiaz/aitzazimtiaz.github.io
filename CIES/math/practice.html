@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Target Practice – Survive the Math Outbreak</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Custom backgrounds & grid layout -->
+  <style>
+    /* Layout for chapter grid */
+    .chapter-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    /* Per-chapter code-only gradient backgrounds */
+    .chapter-capsule.chapter-1  { background: radial-gradient(circle at top left, rgba(255,77,77,0.8), rgba(58,0,0,0.9)); }
+    .chapter-capsule.chapter-2  { background: radial-gradient(circle at top right, rgba(255,140,0,0.8), rgba(60,40,0,0.9)); }
+    .chapter-capsule.chapter-3  { background: radial-gradient(circle at bottom left, rgba(138,43,226,0.8), rgba(40,0,60,0.9)); }
+    .chapter-capsule.chapter-4  { background: radial-gradient(circle at bottom right, rgba(34,139,34,0.8), rgba(0,40,0,0.9)); }
+    .chapter-capsule.chapter-5  { background: radial-gradient(circle at center, rgba(30,144,255,0.8), rgba(0,0,60,0.9)); }
+    .chapter-capsule.chapter-6  { background: radial-gradient(circle, rgba(128,128,128,0.8), rgba(20,20,20,0.9)); }
+    .chapter-capsule.chapter-7  { background: radial-gradient(circle, rgba(218,165,32,0.8), rgba(50,40,0,0.9)); }
+    .chapter-capsule.chapter-8  { background: radial-gradient(circle at top, rgba(0,206,209,0.8), rgba(0,40,50,0.9)); }
+    .chapter-capsule.chapter-9  { background: radial-gradient(circle at bottom, rgba(255,20,147,0.8), rgba(60,0,40,0.9)); }
+    .chapter-capsule.chapter-10 { background: radial-gradient(circle at top, rgba(70,130,180,0.8), rgba(0,20,40,0.9)); }
+    .chapter-capsule.chapter-11 { background: radial-gradient(circle at top right, rgba(123,104,238,0.8), rgba(20,0,60,0.9)); }
+    .chapter-capsule.chapter-12 { background: radial-gradient(circle at bottom right, rgba(50,205,50,0.8), rgba(0,50,20,0.9)); }
+    .chapter-capsule.chapter-13 { background: radial-gradient(circle at left, rgba(255,215,0,0.8), rgba(60,50,0,0.9)); }
+    .chapter-capsule.chapter-14 { background: radial-gradient(circle at bottom left, rgba(255,69,0,0.8), rgba(60,20,0,0.9)); }
+
+    /* Character section layout */
+    .character-section {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    /* Increased character image dimensions */
+    .character-img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 2px solid rgba(255,255,255,0.2);
+    }
+
+    /* Ensure card content doesn’t overflow */
+    .chapter-capsule {
+      overflow: hidden;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Caveat&family=Nosifer&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Emergency Alert Banner -->
+  <div class="alert-banner outbreak-pulse" id="alertBanner">
+    <span class="blink"><i class="fas fa-exclamation-triangle"></i> CODE RED: EXAM OUTBREAK DETECTED <i class="fas fa-exclamation-triangle"></i></span>
+    <div class="siren-light"></div>
+  </div>
+
+  <header>
+    <img src="header.webp" alt="Math Apocalypse" class="header-img">
+    <div class="overlay">
+      <h1 data-text="TARGET_PRACTICE">ALL OF US ARE MATH</h1>
+      <p class="tagline">Survival Difficulty: A2 – Containing the Outbreak</p>
+    </div>
+  </header>
+
+  <nav class="top-nav">
+    <ul>
+      <li><a href="index.html"><i class="fas fa-biohazard"></i> Home Base</a></li>
+      <li><a href="topics.html"><i class="fas fa-brain"></i> Infection Topics</a></li>
+      <li><a href="practice.html" class="active"><i class="fas fa-crosshairs"></i> Target Practice</a></li>
+      <li><a href="papers.html"><i class="fas fa-file-contract"></i> Contaminated Papers</a></li>
+      <li><a href="safezone.html"><i class="fas fa-shield-virus"></i> Quarantine Zone</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Pure Mathematics Section -->
+    <section id="pure-math">
+      <h2><i class="fas fa-calculator"></i> Pure Mathematics Outbreak</h2>
+      <div class="chapter-grid">
+        <!-- Chapter 1 -->
+        <div class="chapter-capsule chapter-1">
+          <h3>Chapter 01: Algebra</h3>
+          <p>Foundations in solving equations and inequalities—your first line of defense.</p>
+          <div class="character-section">
+            <img src="images/onjo.avif" alt="On‑Jo" class="character-img">
+            <p class="character-quote">"Being logical is not necessarily being human" — On‑Jo</p>
+          </div>
+          <a href="chapter/algebra.html" class="contain-button">PRACTICE</a>
+        </div>
+        <!-- Chapter 2 -->
+        <div class="chapter-capsule chapter-2">
+          <h3>Chapter 02: Logarithm & Exponential Functions</h3>
+          <p>Growth and decay models—predict how fast the outbreak spreads.</p>
+          <div class="character-section">
+            <img src="images/cheongsan.jpg" alt="Cheong‑San" class="character-img">
+            <p class="character-quote">“The only way out is through exponential growth!” — Cheong‑San</p>
+          </div>
+          <a href="logarithms.html" class="contain-button">PRACTICE</a>
+        </div>
+        <!-- Chapter 3 -->
+        <div class="chapter-capsule chapter-3">
+          <h3>Chapter 03: Trigonometry</h3>
+          <p>Angles, waves, and oscillations—turn these into weapons against the crisis.</p>
+          <div class="character-section">
+            <img src="images/namra.jpg" alt="Nam‑Ra" class="character-img">
+            <p class="character-quote">“Sine and cosine are our weapons against the outbreak.” — Nam‑Ra</p>
+          </div>
+          <a href="trigonometry.html" class="contain-button">PRACTICE</a>
+        </div>
+        <!-- Chapter 4 -->
+        <div class="chapter-capsule chapter-4">
+          <h3>Chapter 04: Differentiation</h3>
+          <p>Track the rate of change—stay one step ahead of the infection curve.</p>
+          <div class="character-section">
+            <img src="images/jiye.jpg" alt="Ji‑Ye" class="character-img">
+            <p class="character-quote">“Every change counts—every rate matters for survival!” — Ji‑Ye</p>
+          </div>
+          <a href="differentiation.html" class="contain-button">PRACTICE</a>
+        </div>
+        <!-- Chapter 5 -->
+        <div class="chapter-capsule chapter-5">
+          <h3>Chapter 05: Integration</h3>
+          <p>Combine all the pieces—find the area under the curve to neutralize the threat.</p>
+          <div class="character-section">
+            <img src="images/doyoung.jpg" alt="Do‑Young" class="character-img">
+            <p class="character-quote">“Integration holds the cure to our survival!” — Do‑Young</p>
+          </div>
+          <a href="integration.html" class="contain-button">PRACTICE</a>
+        </div>
+        <!-- Chapter 6 -->
+        <div class="chapter-capsule chapter-6">
+          <h3>Chapter 06: Differential Equations</h3>
+          <p>Model the dynamics—control the outbreak by solving how it evolves.</p>
+          <div class="character-section">
+            <img src="images/hyosan.jpg" alt="Hyo‑San" class="character-img">
+            <p class="character-quote">“With differential equations, we control the outbreak!” — Hyo‑San</p>
+          </div>
+          <a href="differential_equations.html" class="contain-button">PRACTICE</a>
+        </div>
+        <!-- Chapter 7 -->
+        <div class="chapter-capsule chapter-7">
+          <h3>Chapter 07: Numerical Methods</h3>
+          <p>Approximate solutions when exact ones fail—our secret weapon.</p>
+          <div class="character-section">
+            <img src="images/jiwon.jpg" alt="Ji‑Won" class="character-img">
+            <p class="character-quote">“Numerical methods lead us to victory!” — Ji‑Won</p>
+          </div>
+          <a href="numerical_methods.html" class="contain-button">PRACTICE</a>
+        </div>
+        <!-- Chapter 8 -->
+        <div class="chapter-capsule chapter-8">
+          <h3>Chapter 08: Vectors</h3>
+          <p>Direction and magnitude—align your forces to push back the infection.</p>
+          <div class="character-section">
+            <img src="images/yoonchan.jpg" alt="Yoon‑Chan" class="character-img">
+            <p class="character-quote">“We’re stronger when we act as vectors in the right direction.” — Yoon‑Chan</p>
+          </div>
+          <a href="vectors.html" class="contain-button">PRACTICE</a>
+        </div>
+        <!-- Chapter 9 -->
+        <div class="chapter-capsule chapter-9">
+          <h3>Chapter 09: Complex Numbers</h3>
+          <p>Tackle 2D threats—use imaginary units to patch the real-world breach.</p>
+          <div class="character-section">
+            <img src="images/jiwon2.jpg" alt="Park Ji‑Won" class="character-img">
+            <p class="character-quote">“Complex numbers are our ultimate weapon against chaos!” — Park Ji‑Won</p>
+          </div>
+          <a href="complex_numbers.html" class="contain-button">PRACTICE</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="statistics">
+      <h2><i class="fas fa-chart-bar"></i> Statistical Contamination</h2>
+      <div class="chapter-grid">
+        <!-- Chapter 10 -->
+        <div class="chapter-capsule chapter-10">
+          <h3>Chapter 10: Representation of Data</h3>
+          <p>Visualize the outbreak—charts and graphs reveal hidden patterns.</p>
+          <div class="character-section">
+            <img src="images/onjo.jpg" alt="On‑Jo" class="character-img">
+            <p class="character-quote">“Data can reveal the outbreak’s pattern.” — On‑Jo</p>
+          </div>
+          <a href="data_representation.html" class="contain-button">PRACTICE</a>
+        </div>
+        <!-- Chapter 11 -->
+        <div class="chapter-capsule chapter-11">
+          <h3>Chapter 11: Permutation & Combination</h3>
+          <p>Mix and match elements—know all the possible survival scenarios.</p>
+          <div class="character-section">
+            <img src="images/cheongsan.jpg" alt="Cheong‑San" class="character-img">
+            <p class="character-quote">“Combining strategies is key to stay alive.” — Cheong‑San</p>
+          </div>
+          <a href="permutations.html" class="contain-button">PRACTICE</a>
+        </div>
+        <!-- Chapter 12 -->
+        <div class="chapter-capsule chapter-12">
+          <h3>Chapter 12: Probability</h3>
+          <p>Estimate your chances—never leave survival up to pure luck.</p>
+          <div class="character-section">
+            <img src="images/namra.jpg" alt="Nam‑Ra" class="character-img">
+            <p class="character-quote">“In a world ruled by chance, probability is our map.” — Nam‑Ra</p>
+          </div>
+          <a href="probability.html" class="contain-button">PRACTICE</a>
+        </div>
+        <!-- Chapter 13 -->
+        <div class="chapter-capsule chapter-13">
+          <h3>Chapter 13: Discrete & Random Variables</h3>
+          <p>Understand random behavior—each variable decides your fate.</p>
+          <div class="character-section">
+            <img src="images/jiwon.jpg" alt="Ji‑Won" class="character-img">
+            <p class="character-quote">“Random variables decide our fate.” — Ji‑Won</p>
+          </div>
+          <a href="random_variables.html" class="contain-button">PRACTICE</a>
+        </div>
+        <!-- Chapter 14 -->
+        <div class="chapter-capsule chapter-14">
+          <h3>Chapter 14: Normal Distribution</h3>
+          <p>Stay under the bell curve—balance is the only way to survive.</p>
+          <div class="character-section">
+            <img src="images/suhyeok.jpg" alt="Su‑Hyeok" class="character-img">
+            <p class="character-quote">“Stay within the curve, or you’ll be overwhelmed.” — Su‑Hyeok</p>
+          </div>
+          <a href="normal_distribution.html" class="contain-button">PRACTICE</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="easter-egg" onclick="revealCure()">© 2025 MATH QUARANTINE AUTHORITY</p>
+    <p class="disclaimer">WARNING: Improper integration may lead to mental decay</p>
+  </footer>
+
+  <script>
+    function revealCure() {
+      new Audio('zombie-groan.mp3').play();
+      document.querySelector('footer').style.textShadow = '0 0 10px #ff0000';
+      setTimeout(() => alert("Cure revealed! Keep practicing for survival!"), 2000);
+    }
+  </script>
+</body>
+</html>
