@@ -1,28 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Introductory Java</title>
   <meta charset="UTF-8">
-  <meta name="description" content="Aitzaz Imtiaz's notes on Java">
-  <meta name="keywords" content="Java, Aitzaz Imtiaz, Notes">
+  <title>Preface – Introductory Java</title>
+  <meta name="description" content="Preface to Aitzaz Imtiaz’s notes on Java">
   <meta name="author" content="Aitzaz Imtiaz">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" rel="stylesheet">
+  <script>
+    MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+  <style>
+    body { max-width: 900px; margin: auto; font-family: "Linux Libertine", "Georgia", serif; }
+    header h1 { text-align: center; font-size: 2.2em; margin-bottom: 0.2em; }
+    .lead { font-size: 1.1em; margin-bottom: 1.5em; }
+    .infobox {
+      float: right;
+      margin: 0 0 1em 1em;
+      padding: 0.5em 1em;
+      border: 1px solid #aaa;
+      background: #f9f9f9;
+      font-size: 0.9em;
+      width: 280px;
+    }
+    pre, code { background: #f4f4f4; padding: 0.5em; display: block; overflow-x: auto; }
+    img.screenshot { max-width: 100%; border: 1px solid #ccc; margin: 1em 0; }
+    nav.next { text-align: right; margin-top: 2em; }
+  </style>
 </head>
-<header>
-  <h1 align="center" style="font-family:courier">Introductory Java</h1>
-</header>
 <body>
-  <p>The following website is for Introductory Java that shall be professionally used to make softwares and
-  research work in Java. Most of my work will have background in Mathematics or tools to run or power applications
-  in this certain work. As such, the content hosted on this site would be used for my Java practice for Cambridge
-  International A Level Computer Science.</p>
+  <header>
+    <h1>Preface</h1>
+  </header>
 
-  <p>This site would broadly cover fundamentals of Java, with promoting an introspective framework for mathematical
-  reasoning and producing working implementations of theoretical and real-life world problems.</p>
+  <aside class="infobox">
+    <strong>Introductory Java</strong><br>
+    <em>By Aitzaz Imtiaz</em><br><br>
+    <strong>Environment</strong><br>
+    Fedora Linux 42 (KDE Plasma)<br>
+    Intel i5-12450H, 16 GB RAM<br>
+    NetBeans IDE, Java 21<br>
+  </aside>
 
-  <p>There will be other compilations of work in Java referenced on the website. For this page however, we will set
-  up Java. There are many different set-ups to do so, but I'll implement and show my setup here.</p>
+  <p class="lead">
+    This project serves as an academic collection of notes and experiments in <strong>Introductory Java</strong>. 
+    It is intended both for professional software development and as a foundation for mathematical reasoning, 
+    with applications ranging from theoretical models to real-world problem-solving.
+  </p>
 
+  <h2>Purpose</h2>
+  <p>
+    The material originates from my <em>Cambridge International A Level Computer Science</em> studies, 
+    but extends beyond to advocate a rigorous, mathematical approach to programming. 
+    The broader aim is not merely to learn Java syntax, but to promote an 
+    introspective framework for reasoning and implementation.
+  </p>
+
+  <h2>System Setup</h2>
+  <p>
+    The initial step is configuring the environment. My system is summarized below:
+  </p>
   <pre>
   <code>
                  .',;::::;,'.                 aitzazisstuffed@byte-me
@@ -50,24 +90,42 @@
                                               Locale: en_US.UTF-8
   </code>
   </pre>
-  <p> Begin by installing and configuring <a href="https://flatpak.org/setup">the setup for Flatpak</a>. After doing so, 
-  download Java from your command-line.
-  <img src="Screenshot_20250822_211457.png">
-  After setting up Java as a runnable command, go to discover and search for Netbeans, and install it. As for a short
-  background, Apache Software Foundations created NetBeams to quickly build desktop, mobile and web applications in
-  Java, Javascript, HTML5, PHP, C/C++ and more. Apache has a <a href="https://netbeans.apache.org/tutorial/main/kb/docs/java/quickstart/">quickstart</a>
-  guide but regardless, we get a quick-peak on NetBeans.</p>
 
-  <p>Before that, I wish to write an advocation for Java. For my syllabus, three programming languages were offered: Python,
-  Java, Visual Basic.NET. I would not recommend starting with Python on earlier stages, though this might be refuteable;
-  Python makes you lazy and dependent while Visual Basic and Java would develop inquisitivity. Even in these two, Visual
-  Basic can be eliminated for a sesnible reason: Microsoft is more hyped about C#. No one (usually) works in Visual Basic
-  and Java is almost everywhere (probably in your car audio system too). For another perk, Tony Stark might be a client
-  of Java! In Iron Man 2, there was heavy branding of Oracle and Tony Stark and Stark Expo being customer to Oracle.</p>
-  <img src="Screenshot_20250822_235036.png">
-  <p>Here is the instance of my setup, running a simple program. As for building tools: Ant, Gradle and Maven are offered
-  where Ant and Maven were earlier tools built by Apache for general applications and libraries respectively while Gradle
-  is commonly used to build Android and other native applications. For a beginner approach, start from Java with Ant.</p>
-  <p align="right"><a href="foreword.html">NEXT</a></p>
+  <p>
+    Begin by installing and configuring <a href="https://flatpak.org/setup">Flatpak</a>. 
+    Afterwards, Java may be installed via the command line. 
+  </p>
+  <img src="Screenshot_20250822_211457.png" alt="Java installation screenshot" class="screenshot">
+
+  <h2>Development Tools</h2>
+  <p>
+    Following installation, proceed to set up <strong>Apache NetBeans</strong>, a versatile IDE 
+    for Java, JavaScript, HTML5, PHP, C/C++, and more. 
+    A quickstart guide is available on the <a href="https://netbeans.apache.org/tutorial/main/kb/docs/java/quickstart/">official site</a>. 
+  </p>
+  <img src="Screenshot_20250822_235036.png" alt="NetBeans screenshot" class="screenshot">
+
+  <h2>Advocacy for Java</h2>
+  <p>
+    My syllabus permits three languages: <em>Python, Java,</em> and <em>Visual Basic .NET</em>. 
+    While Python is often favored, it risks encouraging dependency rather than discipline. 
+    Visual Basic, meanwhile, has largely been eclipsed by C#. 
+    Java remains ubiquitous—powering systems from enterprise servers to embedded devices. 
+  </p>
+  <p>
+    Even in popular culture, Java’s influence surfaces: in <em>Iron Man 2</em>, 
+    Oracle branding suggests that even Tony Stark’s systems may have run on Java.
+  </p>
+
+  <h2>Build Systems</h2>
+  <p>
+    Common tools include <strong>Ant</strong>, <strong>Maven</strong>, and <strong>Gradle</strong>. 
+    Ant and Maven, both Apache projects, laid the groundwork for modern builds, while Gradle dominates Android development. 
+    For beginners, Ant provides a straightforward entry point.
+  </p>
+
+  <nav class="next">
+    <a href="foreword.html">Next → Foreword</a>
+  </nav>
 </body>
 </html>
