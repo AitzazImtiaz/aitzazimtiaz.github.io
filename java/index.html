@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Introductory Java</title>
+  <meta name="description" content="Notes for Introductory Java" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%23eef2f7'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='54' font-family='Georgia, serif' fill='%23333'%3EΣ%3C/text%3E%3C/svg%3E"/>
+  <style>
+    :root{
+      --bg:#f6f7f8; --surface:#fff; --text:#202122; --muted:#54595d; --link:#0645ad; --link-visited:#0b0080; --accent:#eaecf0; --border:#a2a9b1; --code:#f8f9fa; --maxw:1120px;
+    }
+    html{font-size:16px}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,Cantarell,"Noto Sans",Arial,"Apple Color Emoji","Segoe UI Emoji";line-height:1.6}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    a:visited{color:var(--link-visited)}
+
+    /* Header: minimalist (Google-like landing) */
+    header{display:flex;justify-content:center}
+    .masthead{max-width:var(--maxw);width:100%;display:flex;gap:.9rem;align-items:center;justify-content:center;padding:2.25rem 1rem 1.25rem}
+    .logo{width:54px;height:54px;border-radius:50%;display:inline-grid;place-items:center;background:linear-gradient(135deg,#e7ebf2,#f9fafb);border:1px solid var(--accent)}
+    .title{display:grid;justify-items:center}
+    .title h1{margin:.2rem 0 0;font-size:1.85rem;font-weight:650;letter-spacing:.2px}
+    .subtitle{color:var(--muted);font-size:.98rem}
+
+    /* Page layout */
+    .page{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:2.2fr 1fr;gap:1.5rem;padding:0 1rem 3rem}
+    main{background:var(--surface);border:1px solid var(--accent)}
+    article{padding:1.25rem}
+    aside{position:relative}
+
+    h2{font-size:1.35rem;border-bottom:1px solid var(--accent);padding-bottom:.25rem;margin-top:1.6rem}
+    h3{font-size:1.1rem;margin-top:1rem}
+    p{margin:.6rem 0}
+
+    /* Contents blocks */
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;margin-top:.5rem}
+    .card{background:#fff;border:1px solid var(--border);border-radius:8px;padding:.85rem .95rem}
+    .card h4{margin:.2rem 0 .4rem;font-size:1.05rem}
+    .meta{color:var(--muted);font-size:.9rem}
+
+    /* Infobox & quicklinks */
+    .infobox,.quicklinks,.notice{background:#fff;border:1px solid var(--border);border-radius:8px;padding:.9rem;margin-bottom:1rem}
+    .infobox table{width:100%;border-collapse:collapse}
+    .infobox th,.infobox td{padding:.25rem 0;vertical-align:top}
+    .infobox th{text-align:left;color:var(--muted);font-weight:600;width:38%}
+
+    /* Featured & announcements */
+    .featured{display:grid;grid-template-columns:1fr;gap:.9rem}
+    .feature{background:#fff;border:1px solid var(--border);border-radius:8px;padding:1rem}
+    .feature h3{margin:.1rem 0 .35rem}
+
+    /* Tables */
+    table{border-collapse:collapse;width:100%}
+    th,td{border:1px solid var(--accent);padding:.5rem .6rem}
+    th{background:#f3f4f6;text-align:left}
+
+    /* Typography helpers */
+    .small{font-size:.92rem;color:var(--muted)}
+    .badge{display:inline-block;border:1px solid var(--border);padding:.05rem .4rem;border-radius:999px;font-size:.75rem;color:var(--muted)}
+
+    /* Print */
+    @media print{aside{display:none}.page{grid-template-columns:1fr;max-width:7.2in}main{border:none}}
+    @media (max-width:980px){.page{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <div class="masthead" aria-label="Site masthead">
+      <div class="logo" aria-hidden="true"><span style="font-family:Georgia,serif;font-size:1.35rem;color:#333">Σ</span></div>
+      <div class="title">
+        <h1>Introductory Java</h1>
+        <div class="subtitle">A contemporary selection of earlier work in Java and Mathematics</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="page">
+    <main role="main">
+      <article aria-labelledby="intro">
+        <section id="intro" class="notice" aria-label="Editorial introduction">
+          <p><strong>About this site.</strong> The following site hosts introductory and fundamental disemmination of Mathematics with Java, including earlier approaches to study this language.</p>
+          <p class="small">Cite sections individually using their canonical URLs. Where applicable, each page will maintain a version history and change log.</p>
+        </section>
+
+        <h2 id="contents">Table of Contents</h2>
+        <p class="small">Each entry links to a standalone HTML file. Draft status is indicated where relevant. While best effort was taken, this site always need over-haul to remain persistent.</p>
+        <div class="grid" role="list" aria-label="Primary contents">
+          <div class="card" role="listitem">
+            <h4><a href="preface.html">Preface</a></h4>
+            <p>An orienting essay on scope, audience, and editorial policy.</p>
+            <div class="meta">Status: final • Updated: 2025‑08‑23</div>
+          </div>
+          <div class="card" role="listitem">
+            <h4><a href="foreword.html">Foreword</a></h4>
+            <p>Context and motivation by a guest contributor.</p>
+            <div class="meta">Status: final • Updated: 2025‑08‑20</div>
+          </div>
+          <div class="card" role="listitem">
+            <h4><a href="chapter1.html">Chapter 1 — Foundations</a></h4>
+            <p>Core definitions, notation, and preliminaries used throughout.</p>
+            <div class="meta">Status: draft • Updated: 2025‑08‑18</div>
+          </div>
+          <div class="card" role="listitem">
+            <h4><a href="chapter2.html">Chapter 2 — Methods</a></h4>
+            <p>Qualitative and quantitative approaches; reproducibility guidance.</p>
+            <div class="meta">Status: draft • Updated: 2025‑08‑15</div>
+          </div>
+          <div class="card" role="listitem">
+            <h4><a href="chapter3.html">Chapter 3 — Results</a></h4>
+            <p>Representative results with error bounds, tables, and figures.</p>
+            <div class="meta">Status: in review • Updated: 2025‑08‑10</div>
+          </div>
+          <div class="card" role="listitem">
+            <h4><a href="appendix-a.html">Appendix A — Notation</a></h4>
+            <p>Symbol tables and typographic conventions; roman vs. italic.</p>
+            <div class="meta">Status: final • Updated: 2025‑08‑01</div>
+          </div>
+          <div class="card" role="listitem">
+            <h4><a href="appendix-b.html">Appendix B — Data & Materials</a></h4>
+            <p>Datasets, licenses, checksums, and replication checklists.</p>
+            <div class="meta">Status: draft • Updated: 2025‑07‑28</div>
+          </div>
+          <div class="card" role="listitem">
+            <h4><a href="glossary.html">Glossary</a></h4>
+            <p>Definitions and cross‑references for key terms.</p>
+            <div class="meta">Status: living • Updated: 2025‑08‑22</div>
+          </div>
+          <div class="card" role="listitem">
+            <h4><a href="bibliography.html">Bibliography</a></h4>
+            <p>Primary and secondary sources with persistent identifiers.</p>
+            <div class="meta">Status: living • Updated: 2025‑08‑23</div>
+          </div>
+          <div class="card" role="listitem">
+            <h4><a href="index-subjects.html">Index (Subjects)</a></h4>
+            <p>Alphabetical subject index for quick navigation.</p>
+            <div class="meta">Status: in progress • Updated: 2025‑08‑12</div>
+          </div>
+          <div class="card" role="listitem">
+            <h4><a href="index-symbols.html">Index (Symbols)</a></h4>
+            <p>Mathematical symbols and where they appear in the text.</p>
+            <div class="meta">Status: in progress • Updated: 2025‑08‑12</div>
+          </div>
+        </div>
+
+        <h2 id="featured">Featured</h2>
+        <div class="featured">
+          <div class="feature">
+            <h3><a href="spotlight-derivations.html">Spotlight: Elegant Derivations</a> <span class="badge">curated</span></h3>
+            <p>A guided tour of concise proofs and identities, such as $$\sum_{k=1}^n k = \tfrac{n(n+1)}{2}$$ and the binomial theorem in generating‑function form, with historical notes.</p>
+          </div>
+          <div class="feature">
+            <h3><a href="style-guide.html">Author Style Guide</a> <span class="badge">policy</span></h3>
+            <p>House rules for notation, references, and figure preparation. Includes templates for tables, definitions, theorems, and algorithms.</p>
+          </div>
+        </div>
+
+        <h2 id="policies">Editorial Policy</h2>
+        <p>I aim for a neutral, citable tone. Each page should include:
+        </p>
+        <ul>
+          <li><strong>Provenance.</strong> Note primary sources and data lineage.</li>
+          <li><strong>Reproducibility.</strong> Provide scripts and environment details where possible.</li>
+          <li><strong>Licensing.</strong> Prefer CC BY‑SA 4.0 for text and an OSI‑approved license for code.</li>
+          <li><strong>Accessibility.</strong> Write descriptive alt text; avoid color‑only encodings.</li>
+        </ul>
+
+        <h2 id="revision">Recent Revisions (Selected)</h2>
+        <table aria-label="Recent revisions">
+          <thead>
+            <tr><th>Date</th><th>Page</th><th>Change</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>2025‑08‑23</td><td><a href="bibliography.html">Bibliography</a></td><td>Added DOIs and arXiv IDs to 12 entries.</td></tr>
+            <tr><td>2025‑08‑22</td><td><a href="glossary.html">Glossary</a></td><td>Clarified conventions for boldface vectors vs. unit vectors.</td></tr>
+            <tr><td>2025‑08‑18</td><td><a href="chapter1.html">Chapter 1</a></td><td>Inserted lemma on completeness; expanded examples.</td></tr>
+          </tbody>
+        </table>
+      </article>
+    </main>
+
+    <aside role="complementary" aria-label="Sidebar">
+      <section class="infobox" aria-label="Infobox">
+        <h3 style="margin-top:0">Infobox</h3>
+        <table>
+          <tr><th>Maintainer</th><td>Aitzaz Imtiaz</td></tr>
+          <tr><th>Discipline</th><td>Mathematics / Computing</td></tr>
+          <tr><th>License</th><td>CC BY‑SA 4.0</td></tr>
+          <tr><th>Build</th><td>Static (GitHub Pages)</td></tr>
+          <tr><th>Last updated</th><td>2025‑08‑23</td></tr>
+          <tr><th>Contact</th><td><a href="mailto:aitzazimtiaz.ai@gmail.com">aitzazimtiaz.ai@gmail.com</a></td></tr>
+        </table>
+      </section>
+
+      <section class="quicklinks" aria-label="Quick links">
+        <h3 style="margin-top:0">Quick Links</h3>
+        <ul>
+          <li><a href="style-guide.html">Author Style Guide</a></li>
+          <li><a href="citations.html">Citation Formats</a></li>
+          <li><a href="colophon.html">Colophon & Build</a></li>
+        </ul>
+      </section>
+
+      <section class="quicklinks" aria-label="How to cite">
+        <h3 style="margin-top:0">How to Cite</h3>
+        <p class="small">Aitzaz Imtiaz, <em>Page Title</em>, in <em>Introductory Java</em>, version/date, URL. Example:</p>
+        <blockquote class="small">Your Name (2025), “Chapter 1 — Foundations,” <em>Scholia</em>, v0.1/2025‑08‑18, https://aitzazimtiaz.github.io/chapter1.html</blockquote>
+      </section>
+    </aside>
+  </div>
+
+  <footer role="contentinfo" style="max-width:var(--maxw);margin:1.6rem auto 2.4rem;padding:0 1rem;color:var(--muted);font-size:.92rem;display:flex;gap:.5rem;flex-wrap:wrap">
+    <div>Text licensed under CC BY‑SA 4.0.</div>
+    <div>•</div>
+    <div>Version 0.1</div>
+    <div>•</div>
+    <div>Built with semantic HTML and accessible defaults.</div>
+  </footer>
+
+  <!-- MathJax: dollar and double‑dollar delimiters -->
+  <script>
+    window.MathJax = { tex: { inlineMath:[["$","$"]], displayMath:[["$$","$$"]] } };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>
