@@ -1,34 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Foreword</title>
   <meta charset="UTF-8">
-  <meta name="description" content="Aitzaz Imtiaz's notes on Java">
-  <meta name="keywords" content="Java, Aitzaz Imtiaz, Notes">
+  <title>Preface – Introductory Java</title>
+  <meta name="description" content="Preface to Aitzaz Imtiaz’s notes on Java">
   <meta name="author" content="Aitzaz Imtiaz">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" rel="stylesheet">
   <script>
-    window.MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']]
-      }
+    MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
     };
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+  <style>
+    body { max-width: 900px; margin: auto; font-family: "Linux Libertine", "Georgia", serif; }
+    header h1 { text-align: center; font-size: 2.2em; margin-bottom: 0.2em; }
+    .lead { font-size: 1.1em; margin-bottom: 1.5em; }
+    .infobox {
+      float: right;
+      margin: 0 0 1em 1em;
+      padding: 0.5em 1em;
+      border: 1px solid #aaa;
+      background: #f9f9f9;
+      font-size: 0.9em;
+      width: 280px;
+    }
+    pre, code { background: #f4f4f4; padding: 0.5em; display: block; overflow-x: auto; }
+    img.screenshot { max-width: 100%; border: 1px solid #ccc; margin: 1em 0; }
+    nav.next { text-align: right; margin-top: 2em; }
+  </style>
 </head>
-<header>
-  <h1 align="center" style="font-family:courier">Introductory Java</h1>
-</header>
 <body>
+  <header>
+    <h1>Preface</h1>
+  </header>
+
+  <aside class="infobox">
+    <strong>Introductory Java</strong><br>
+    <em>By Aitzaz Imtiaz</em><br><br>
+    <strong>Environment</strong><br>
+    Fedora Linux 42 (KDE Plasma)<br>
+    Intel i5-12450H, 16 GB RAM<br>
+    NetBeans IDE, Java 21<br>
+  </aside>
+
+  <p class="lead">
+    This project serves as an academic collection of notes and experiments in <strong>Introductory Java</strong>. 
+    It is intended both for professional software development and as a foundation for mathematical reasoning, 
+    with applications ranging from theoretical models to real-world problem-solving.
+  </p>
+  <h2>Is Mathjax running?</h2>
   <p>The following site uses Mathjax. You should be available to see equations such as: $$x=\frac{-b \pm \sqrt{b^2-4ac}}{2a},$$
   i.e. If you are unable to see the equations, please upgrade your browser.</p>
   <p>Forgive me for misuse of Foreword here but to mention, I intend to clearly learn Java for Mathematics and related calculations.
   I stress upon use of Mathematics in the development of these pages, as it is going to boost my Data Science inquisitivity personally
   but also in a sense of feeling that Java can be explored for mathematical developments. Most of the work here will remain experimental
   and in pure faith.</p>
-  <p align="left"><a href="index.html">BACK</a></p>
-  <p align="right"><a href="foreword.html">NEXT</a></p>
 </body>
 </html>
